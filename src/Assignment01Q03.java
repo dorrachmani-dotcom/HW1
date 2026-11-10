@@ -1,11 +1,11 @@
 public class Assignment01Q03 {
-    // Note: int overflows for x >= 47 (F(47) > Integer.MAX_VALUE); long would work up to x = 92.
+    // Note: long overflows for x >= 92 (F(92) > Integer.MAX_VALUE);
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
         System.out.println("The first " + x + " Fibonacci numbers are:");
         int numOdd = 0;
-        int prev1 = 1;
-        int prev2 = 1;
+        long prev1 = 1;
+        long prev2 = 1;
         for (int i = 0; i < x; i++) {
             if (prev1 % 2 != 0) {
                 numOdd++;
@@ -13,7 +13,7 @@ public class Assignment01Q03 {
             System.out.print(prev1);
             if (i < x - 1)
                 System.out.print(" "); // Make sure we don't print a trailing space
-             int next = prev1 + prev2;
+             long next = prev1 + prev2;
             prev1 = prev2;
             prev2 = next;
         }
