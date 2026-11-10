@@ -1,5 +1,5 @@
 public class Assignment01Q03 {
-    // Note: long overflows for x >= 92 (F(92) > Integer.MAX_VALUE);
+    // Note: long overflows for x >= 93 (F(93) > Integer.MAX_VALUE);
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
         System.out.println("The first " + x + " Fibonacci numbers are:");
